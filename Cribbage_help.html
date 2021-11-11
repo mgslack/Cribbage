@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta name="Author" content="Michael G. Slack">
+    <title>Cribbage Help</title>
+    <style>
+      table, td {
+        border:1px solid black;
+      }
+      tr, td {
+        vertical-align:top;
+      }
+      #image {width:71px; height:96px; float:left; padding:0px 5px 5px 0px;}
+      #center, #footertext {text-align:center;}
+      #bold {font-weight:bold;}
+      #linone {list-style-type:none;}
+      #tableplace {margin-left:auto; margin-right:auto; width:75%;}
+      #width50 {width:50%;}
+      #footertext {font-size:smaller;}
+    </style>
+  </head>
+  <body>
+    <div id="center"><h1>Cribbage - Help</h1></div>
+    <div>
+      Quick Links: <a href="#rules">Rules</a> | <a href="#scoring">Scoring</a> | <a href="#playscoring">Scoring During Play</a> | <a href="#options">Options</a>
+    </div>
+    <div>
+      <img id="image" alt="Cribbage Game Image" src="Cribbage_help.png">
+      <p>Cribbage is a card game played in a series of rounds, traditionally with two players, until one player moves
+         a peg around the cribbage board twice (standard cribbage board - 121 points). In this cribbage game, you play
+         the computer instead of a human opponent. Blue is the computer, red is the player.</p>
+      <p>The game play should be relatively straight forward. When the game starts up, a player can start a new game,
+         set game options or exit. If new game is selected, the cards are shuffled, and 6 cards are dealt to the player
+         and computer. At this point, the first 'crib' holder is drawn for and a dialog displayed to the player on who
+         has the 'crib' at the start.  The 6 cards for the player are displayed with a 'Discard' button underneath
+         each card for the player to select two for discard into the 'crib' hand. If 'Discard' is selected, the button
+         text changes to 'Keep'. The 'Keep' allows the player to change their mind about a card chosen for discard.
+         Once two, and only two cards are selected to discard, the 'Continue' button is enabled.</p>
+      <p>By selecting the 'Continue' button, a player discards the selected cards into the 'crib' hand and game play starts
+         with another card being dealt as an up-card. Note: If during game play start, the up-card dealt is a 'jack',
+         then the 'crib' holder gets two points. The remaining four (4) cards in the players hand are displayed to
+         them with the button text now showing 'Play'. When it is the players turn, they can either choose the 'go' button
+         or one of the 'Play' buttons to play a card. You can only select the 'go' button if you have no play to make
+         (that is, you don't have a card that doesn't take the played cards value tally over 31 points). During game
+         play, if a <a href="#playscoring">score</a> is made by either side, a dialog will pop up with a summary of the
+         scores made.</p>
+      <p>At any time, the 'new game' button can be pressed to start a new game before the current game is completed.</p>
+      <p>Once the game play is completed and all cards have been played, then <a href="#scoring">scoring</a> begins.
+         Depending on who scores first, the player will see either the score entry dialog or a dialog informing the
+         player what the computer has. With these dialogs, the associated card hand is displayed to the player. If
+         the player holds the 'crib' hand, then those cards and the score entry dialog are shown after the hand score
+         is displayed and entered.</p>
+      <p>This continues until one player or the other gets to 121 points. At this time (which may happen during any
+         score opportunity), the game wipes all of the cards being displayed off the board and disables all but the
+         'new game', 'options' and 'exit' buttons. If playing a cribbage match, the winning player will get 1 or more
+         match points. If the winner reaches the winning match point value, they also win the match. If not, a new
+         game should be started to continue the match until one player or the other wins.</p>
+    </div>
+    <div id="bold"><a id="rules">Rules</a></div>
+    <div>
+      <p>At the start of each round, each player gets six (6) cards of which they will pick two (2) cards to discard
+         into the 'crib' hand leaving them with four (4) cards to play the hand with. After the crib is discarded
+         into, a card is turned up (the rounds up-card) and the round begins with the player holding the 'crib' hand
+         starting by playing one of their four cards. Game play continues with each player taking turns playing a card
+         until all of the cards are played. Note though that during a hand, you may not be able to play a card because
+         the total of the cards played makes more than 31 points. In which case the player who played last card gets
+         one point and the played cards are cleared from the table, resetting the tally. During game play, it is
+         possible to make other <a href="#playscoring">scores</a>.</p>
+      <p>After all of the cards are played from both players hands, the hands are then <a href="#scoring">scored</a>
+         starting with the player who does not hold the 'crib' hand. The other player then scores their hand and the
+         'crib' hand. At any point during this scoring round if one player or the other makes 121 points, the game
+         is over. When scoring the hands at this stage, the up-card is included within the hand as an additional card.
+         New hands are dealt to both players if neither has reached 121 points starting a new round with the other player
+         getting the 'crib' hand.</p>
+      <p>If the 'match points' <a href="#options">option</a> is checked, a cribbage match is played (typically 3, 5 or 7
+         match points) which could be double the match points of games or less if skunk points are won. Additional match
+         point(s) can be gotten by 'skunking' the opponent. A skunk is counted if the losing player has less than 91
+         points when the winning player gets to 121. If not playing with the match points option turned on, skunks are
+         ignored. With the 'match points' option, the winning number of match points can be set and the game will let the
+         player know once either they or the computer has won the match. It is up to the player to keep starting new
+         games until the match has been won. Double and triple skunk points can be scored if the option for 'double/triple
+         skunks scored' is checked. A double skunk is scored with 3 additional match points if the losing player has less
+         than 61 points. A triple skunk is scored with 7 additional match points if the losing player has less than 31
+         points. A triple skunk will be an automatic win for a standard match played to 7 points or less.</p>
+      <ul>
+        <li id="linone"><div id="bold">Play Hints:</div>
+        <li>When determining what cards to discard, you should keep the hand that without the up-card gives the biggest
+         score possible. All that the up-card can do then is make your score better. Sometimes you can get lucky
+         guessing what the up-card might be, but overall, you should keep the hand that will give the biggest return
+         not depending on the up-card.
+        <li>If at all possible, do not play a five as your first card. It is too easy for the opponent to make 15 when
+         a five is played first.
+        <li>When determining what card to play next, play the card that will give you points. If not, try to play a card
+         that will not give a point advantage to the opponent.</p>
+      </ul>
+    </div>
+    <div id="bold"><a id="scoring">Scoring</a></div>
+    <div>
+      <p>Scoring a cribbage hand is not difficult, though it is possible to miss points. Note that there are some
+         differences to the hand scores depending on if a players hand is being scored or the 'crib' hand is being
+         scored. The following table contains the combinations and the scores possible by each one (note for point
+         values, face cards count as 10 points).</p>
+      <div id="tableplace">
+        <table>
+          <tbody>
+            <tr>
+              <td id="width50">Jack (of up-card suit)</td>
+              <td id="width50">1 point</td>
+            </tr>
+            <tr>
+              <td>15 points (in any unique combination of cards - 2, 3, 4 or 5)</td>
+              <td>2 points</td>
+            </tr>
+            <tr>
+              <td>Flush (all same suit)<br>
+                  - Note: if "crib" hand, all cards including the up-card must be of the same suit.
+              </td>
+              <td>4 points/5 if up-card same suit also or crib hand</td>
+            </tr>
+            <tr>
+              <td>Pair</td>
+              <td>2 points</td>
+            </tr>
+            <tr>
+              <td>Three-of-a-kind</td>
+              <td>6 points (3 pairs)</td>
+            </tr>
+            <tr>
+              <td>Four-of-a-kind</td>
+              <td>12 points (6 pairs)</td>
+            </tr>
+            <tr>
+              <td>Unique Straights (3 cards and over)</td>
+              <td>3, 4 or 5 points depending on the number of cards.</td>
+            </tr>
+          </tbody> 
+        </table>
+      </div>
+      <ul>
+        <li id="linone"><div id="bold">Score Examples:</div>
+        <li>Hand: 7S, 7C, 8S, 9D - up-card 1H = 14 points (2 3 card straights, 1 pair, 3 sets of 15 (7S/8S 7C/8S 7S/7C/1H))
+        <li>Hand: 5D, 5S, JS, QD - up-card QS = 15 points (jack of suit, 2 pairs, 6 sets of 15)
+        <li>Crib Hand: 6D, 9D, 10D, QD - up-card 5H = 6 points (3 sets of 15 - crib hand needs up-card of suit to count flush)
+      </ul>
+      <ul>
+        <li id="linone"><div id="bold">Other Items:</div>
+        <li>Note: it is possible (bad luck) to have a hand that has no points in it. There is a better chance that the
+            'crib' hand may have no points in it.
+        <li>If points are missed, the computer will call you on it and score (for itself) the difference. This is known
+            as 'Muggins'. The computer will not miss points so the player will not have this opportunity.
+      </ul>
+    </div>
+    <div id="bold"><a id="playscoring">Scoring During Play</a></div>
+    <div>
+      <p>Scores that can be gotten during game play are similar to hand <a href="#scoring">scoring</a>. The following
+         table illustrates the scores that can be had. More than one of these could possibly be gotten and if so, then
+         multiple dialogs will display the different items that made scores. Note: for point scores, face cards (jacks,
+         queens, kings) count as 10 points. Also note, the up-card is not used for scoring during game play.</p>
+      <div id="tableplace">
+        <div id="bold">The possible scores are:</div>
+        <table>
+          <tbody>
+            <tr>
+              <td id="width50">Jack (dealt as up-card, for "crib" holder)</td>
+              <td id="width50">2 points</td>
+            </tr>
+            <tr>
+              <td>15 points (tally of cards played)</td>
+              <td>2 points</td>
+            </tr>
+            <tr>
+              <td>31 points (tally of cards played)</td>
+              <td>2 points</td>
+            </tr>
+            <tr>
+              <td>Pair</td>
+              <td>2 points</td>
+            </tr>
+            <tr>
+              <td>Three-of-a-kind</td>
+              <td>6 points</td>
+            </tr>
+            <tr>
+              <td>Four-of-a-kind</td>
+              <td>12 points</td>
+            </tr>
+            <tr>
+              <td>Straight (3 + cards). The straight does not have to be played in order (exp: 5S, 7D, 6C, 4D - first
+                  three gave first player 3 points, playing the fourth gave second player 4 points).
+              </td>
+              <td>Between 3 and number of cards in straight (maximum would be 8 points).</td>
+            </tr>
+            <tr>
+              <td>Last card played, unless 31 points made</td>
+              <td>1 point</td>
+            </tr>
+          </tbody> 
+        </table>
+      </div>
+      <p>If a player gets blocked after the other player has run out of cards, then the player does not get to count
+         last point (self-blocked).</p>
+    </div>
+    <div>
+      <p>For more information on Cribbage and Cribbage rules, see the
+         <a href="http://en.wikipedia.org/wiki/Cribbage">Cribbage</a> entry on Wikipedia.</p>
+    </div>
+    <div id="bold"><a id="options">Options</a></div>
+      <p>There are a few options that can be set by the player.  Options are set by selecting the 'options' button,
+         then setting the option desired in the dialog.  Press OK to save, cancel to quit without saving the options.</p>
+      <ul>
+        <li>Prompts On - If checked, turns on a yes/no prompt if the new game button or exit button is selected and
+            current game isn't over yet. Also prompts if match play is on and the current match has not been won yet
+            when the exit button has been pushed.
+        <li>Human Player Always Starts - If checked, the crib hand is always given to the player first, never the computer.
+        <li>Crib Board Sounds On - If checked, peg moves make a clicking sound when being moved within the cribbage board.
+        <li>Card Back Image - Select an image to display when a card back image is needed (the up-card position).  The
+            image selected is displayed for preview within the dialog. Only one of the images in the list can be selected.
+        <li>Match Points - Instead of 'Games Won' showing, 'Match Points' is displayed.  Also, match points allow for
+            the skunk rule to give an additional match point (or multiple if double/triple skunk turned on).
+        <li>Match Points for Win - Number of match points needed to win the match. Value could be from 3 - 99 and should
+            be an odd value. Traditionally, matches are to 3, 5, or 7 points. This options is only available and used
+            if the Match Points options is checked.
+        <li>Double/Triple Skunk Scored - Double and triple skunks are scored during match play. See the
+            <a href="#rules">rules</a> for what constitutes double and triple skunks. Regular match play does not
+            typically score double and triple skunk points. For this game, double skunk is an additional 3 match points,
+            triple skunk is an additional 7 match points. Triple skunk should be an automatic win for matches played to
+            7 points or less.
+      </ul>
+    </div>
+    <div id="footertext">&copy; 2014 Slack &amp; Associates / M. G. Slack</div>
+  </body>
+</html>
